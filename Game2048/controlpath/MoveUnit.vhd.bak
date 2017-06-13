@@ -1,0 +1,15 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY MoveUnit IS
+    PORT (
+        KEY_0 : IN STD_LOGIC := '0';
+		  KEY_1 : IN STD_LOGIC := '0';
+		  KEY_2 : IN STD_LOGIC := '0';
+		  KEY_3 : IN STD_LOGIC := '0';
+		  
+        clk : in STD_LOGIC;
+        move : out STD_LOGIC := '0';
+        moveDir : OUT STD_LOGIC_VECTOR(1 downto 0)
+    );
+END MoveUnit;

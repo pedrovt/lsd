@@ -1,0 +1,18 @@
+package Box is
+
+	type box is record
+    --
+    -- Signals required by the video DAC (Digital to Analog Converter)
+    --
+    h_sync       : std_logic; -- horizontal sync pulse
+    v_sync       : std_logic; -- vertical sync pulse
+    blank_n      : std_logic; -- blank signal ('1' when inside display area, '0' when outside display area)
+    --
+    -- Signals useful to the generation of the color of each pixel
+    --
+    x            : vga_x_t;   -- x coordinate of the video signal
+    y            : vga_y_t;   -- y coordinate of the video signal
+    end_of_line  : std_logic; -- end of line pulse (equal to x = vga_width and y < vga_height)
+    end_of_frame : std_logic; -- end of video frame pulse (equal to x = vga_width and y = vga_height)
+  end record vga_data_t;
+end package Box;

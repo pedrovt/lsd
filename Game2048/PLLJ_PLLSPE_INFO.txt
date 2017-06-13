@@ -1,0 +1,10 @@
+PLL_Name	DrawUI:DrawUI|vga_clock_generator:vga_clock_generator|clock_generator:\I:c|altpll:PLL|clock_auto_altpll:auto_generated|pll1
+PLLJITTER	8
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	GameBoardScore:Board|clock_generator:clock_generator|altpll:PLL|clock_auto_altpll1:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

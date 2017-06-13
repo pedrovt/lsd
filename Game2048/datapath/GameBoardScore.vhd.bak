@@ -1,0 +1,81 @@
+-- GameBoardScore
+-- Based on Part III, Guide 10 (RAM_2P_16_8.vhd)
+
+-- Implements a board 4*4 - ie with 16 positions
+-- Each RAM address stores a std_logic_vector coding 
+-- an integer number from 1 to 11, corresponding to the 
+-- powers of 2 between 2 and 2048 (max allowed value by design)
+
+-- todo: solve clock issues (we need 16 clocks to update...) and start making the conditions to control s_romData info
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity GameBoardScore is
+port (clk			 : in  std_logic;
+		
+		reset			 : in  std_logic;
+ 		move 			 : in  std_logic;
+		moveDir 		 : in  std_logic_vector(1 downto 0);
+			
+		readData		 : out std_logic_vector(3 downto 0);		-- info output @Milestone
+		readDataAddr : out std_logic_vector(3 downto 0);		-- indicates what box the info is related to
+		writeData	 : in std_logic_vector(3 downto 0);
+		writeDataAddr : out std_logic_vector(3 downto 0);		
+		done			 : out std_logic);								-- flag (=1 when at least one of the elements of the s_memory signal is = 11)
+
+--		score2		 : out std_logic_vector(7 downto 0);		-- MSB 8 bits of the score
+--		score1		 : out std_logic_vector(7 downto 0));		-- LSB 8 bits of the score
+
+end GameBoardScore;
+
+architecture Structural of GameBoardScore is
+	
+	signal s_readAddress, s_writeAddress: std_logic_vector(3 downto 0);
+	signal s_writeData, s_romData: std_logic_vector(3 downto 0);
+	--signal s_score : integer;
+	
+begin
+	
+	addr_counter_read : entity work.Counter4Bits(Behavioral)
+						port map (clk    => clk,
+									 reset  => reset,
+									 count => s_readAddress);
+									 
+	addr_counter_write : entity work.Counter4Bits(Behavioral)
+						port map (clk    => clk,
+									 reset  => not move,
+									 count => s_writeAddress);
+	
+	RAM_memory : entity work.RAM_2P_4_4(Behavioral)
+					 port map (clk 			=> clk,
+								  reset		   => reset,
+								  readAddress  => s_readAddress,
+								  writeAddress => s_writeAddress,
+								  writeEnable  => move,
+								  writeData    => writeData,
+								  readData     => s_romData);
+	
+	-- detects done
+	process(s_romData)
+	begin
+		if (s_romData = "1011") then
+			done <= '1'; 
+		else
+			done <= '0';
+		end if;
+		
+		--s_score <= s_score + to_integer(unsigned(s_romData));
+	end process;
+	
+	readDataAddr <= s_readAddress;
+	readData     <= s_romData;		
+	
+	--debug
+	writeDataAddr <= s_writeAddress;
+	
+	-- computes score
+	--score1 <= std_logic_vector(to_unsigned(s_score));
+	
+end Structural;

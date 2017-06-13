@@ -1,0 +1,9 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity DrawUI is
+port (clk:	 in std_logic;
+		info : in std_logic_vector(1 downto 0);
+		s_data : out std_logic_vector(7 downto 0);
+		s_rgb : out std_logic_vector(7 downto 0));
+end DrawUI;
