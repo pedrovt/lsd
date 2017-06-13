@@ -1,0 +1,105 @@
+# do IterMultDiv_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 00:58:21 on Apr 29,2017
+# vcom -reportprogress 300 -93 -work work C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity AddSubRegN
+# -- Compiling architecture Behavioral of AddSubRegN
+# End time: 00:58:21 on Apr 29,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/docs/Aula9/Parte2/IterDivCore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 00:58:22 on Apr 29,2017
+# vcom -reportprogress 300 -93 -work work C:/altera/docs/Aula9/Parte2/IterDivCore.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity IterDivCore
+# -- Compiling architecture Structural of IterDivCore
+# End time: 00:58:22 on Apr 29,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/altera/docs/Aula9/Parte2/IterMultCore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 00:58:22 on Apr 29,2017
+# vcom -reportprogress 300 -93 -work work C:/altera/docs/Aula9/Parte2/IterMultCore.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity IterMultCore
+# -- Compiling architecture Structural of IterMultCore
+# ** Error: (vcom-11) Could not find work.multctrlunit.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(26): (vcom-1195) Cannot find expanded name "work.MultCtrlUnit".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(26): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shiftregn.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(41): (vcom-1195) Cannot find expanded name "work.ShiftRegN".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(41): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shiftregn.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(55): (vcom-1195) Cannot find expanded name "work.ShiftRegN".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(55): Unknown expanded name.
+# -- Loading package NUMERIC_STD
+# -- Loading entity AddSubRegN
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(80): VHDL Compiler exiting
+# End time: 00:58:22 on Apr 29,2017, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+# ** Error: C:/altera/15.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./IterMultDiv_run_msim_rtl_vhdl.do line 10
+# C:/altera/15.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/altera/docs/Aula9/Parte2/IterMultCore.vhd}"
+vcom -reportprogress 300 -work work C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd C:/altera/docs/Aula9/Parte2/ClkDividerN.vhd C:/altera/docs/Aula9/Parte2/IterDivCore.vhd C:/altera/docs/Aula9/Parte2/IterMultCore.vhd C:/altera/docs/Aula9/Parte2/IterMultDiv.vhd C:/altera/docs/Aula9/Parte2/IterMultDiv_Tb.vhd C:/altera/docs/Aula9/Parte2/MainCtrlUnit.vhd C:/altera/docs/Aula9/Parte2/MultCtrlUnit.vhd C:/altera/docs/Aula9/Parte2/ShiftRegN.vhd
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 00:59:06 on Apr 29,2017
+# vcom -reportprogress 300 -work work C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd C:/altera/docs/Aula9/Parte2/ClkDividerN.vhd C:/altera/docs/Aula9/Parte2/IterDivCore.vhd C:/altera/docs/Aula9/Parte2/IterMultCore.vhd C:/altera/docs/Aula9/Parte2/IterMultDiv.vhd C:/altera/docs/Aula9/Parte2/IterMultDiv_Tb.vhd C:/altera/docs/Aula9/Parte2/MainCtrlUnit.vhd C:/altera/docs/Aula9/Parte2/MultCtrlUnit.vhd C:/altera/docs/Aula9/Parte2/ShiftRegN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity AddSubRegN
+# -- Compiling architecture Behavioral of AddSubRegN
+# -- Compiling entity ClkDividerN
+# -- Compiling architecture Behavioral of ClkDividerN
+# -- Compiling entity IterDivCore
+# -- Compiling architecture Structural of IterDivCore
+# -- Compiling entity IterMultCore
+# -- Compiling architecture Structural of IterMultCore
+# ** Error: (vcom-11) Could not find work.multctrlunit.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(26): (vcom-1195) Cannot find expanded name "work.MultCtrlUnit".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(26): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shiftregn.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(41): (vcom-1195) Cannot find expanded name "work.ShiftRegN".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(41): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.shiftregn.
+# 
+# ** Error (suppressible): C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(55): (vcom-1195) Cannot find expanded name "work.ShiftRegN".
+# 
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(55): Unknown expanded name.
+# -- Loading entity AddSubRegN
+# ** Error: C:/altera/docs/Aula9/Parte2/IterMultCore.vhd(80): VHDL Compiler exiting
+# End time: 00:59:06 on Apr 29,2017, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0

@@ -1,0 +1,85 @@
+# do RAM_1P_Demo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 18:22:15 on May 16,2017
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RAM_1P_16_8
+# -- Compiling architecture Behavioral of RAM_1P_16_8
+# End time: 18:22:16 on May 16,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work {C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 18:22:50 on May 16,2017
+# vcom -reportprogress 300 -work work C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RAM_1_SWR_ARD_Tb
+# -- Compiling architecture Stimulus of RAM_1_SWR_ARD_Tb
+# -- Loading package NUMERIC_STD
+# -- Loading entity RAM_1P_16_8
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(21): near "clk_proc": (vcom-1576) expecting ';'.
+# 
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(23): Illegal concurrent statement.
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(24): Illegal target for signal assignment.
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(24): (vcom-1136) Unknown identifier "s_clock".
+# 
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(24): Illegal concurrent statement.
+# ** Error: C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd(25): near "process": (vcom-1576) expecting ';'.
+# 
+# End time: 18:22:50 on May 16,2017, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 18:24:04 on May 16,2017
+# vcom -reportprogress 300 -work work C:/Users/Pedro/Documents/Universidade de Aveiro/LSD/LSD-Docs/Aula10/Parte2/RAM_1P_16_8_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RAM_1_SWR_ARD_Tb
+# -- Compiling architecture Stimulus of RAM_1_SWR_ARD_Tb
+# -- Loading package NUMERIC_STD
+# -- Loading entity RAM_1P_16_8
+# End time: 18:24:05 on May 16,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.ram_1_swr_ard_tb
+# vsim work.ram_1_swr_ard_tb 
+# Start time: 18:24:16 on May 16,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.ram_1_swr_ard_tb(stimulus)
+# Loading work.ram_1p_16_8(behavioral)
+add wave -position end  sim:/ram_1_swr_ard_tb/s_clk
+add wave -position end  sim:/ram_1_swr_ard_tb/s_writeEnable
+add wave -position end  sim:/ram_1_swr_ard_tb/s_address
+add wave -position end  sim:/ram_1_swr_ard_tb/s_writeData
+add wave -position end  sim:/ram_1_swr_ard_tb/s_ReadData
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /ram_1_swr_ard_tb/ram_ut
+run
+run
+run
+run
+run
+# End time: 18:55:16 on May 16,2017, Elapsed time: 0:31:00
+# Errors: 0, Warnings: 1

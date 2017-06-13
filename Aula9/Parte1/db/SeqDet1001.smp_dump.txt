@@ -1,0 +1,7 @@
+
+State Machine - |SeqDet1001|SeqDetFSM:seqDet|pState
+Name pState.D pState.C pState.B pState.A 
+pState.A 0 0 0 0 
+pState.B 0 0 1 1 
+pState.C 0 1 0 1 
+pState.D 1 0 0 1 

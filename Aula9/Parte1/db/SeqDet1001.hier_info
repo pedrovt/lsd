@@ -1,0 +1,58 @@
+|SeqDet1001
+CLOCK_50 => freqdivider:freqDiv.clkIn
+KEY[0] => seqdetfsm:seqDet.reset
+SW[0] => seqdetfsm:seqDet.xin
+LEDR[0] <= seqdetfsm:seqDet.yout
+LEDG[8] <= freqdivider:freqDiv.clkOut
+
+
+|SeqDet1001|FreqDivider:freqDiv
+clkIn => s_count[0].CLK
+clkIn => s_count[1].CLK
+clkIn => s_count[2].CLK
+clkIn => s_count[3].CLK
+clkIn => s_count[4].CLK
+clkIn => s_count[5].CLK
+clkIn => s_count[6].CLK
+clkIn => s_count[7].CLK
+clkIn => s_count[8].CLK
+clkIn => s_count[9].CLK
+clkIn => s_count[10].CLK
+clkIn => s_count[11].CLK
+clkIn => s_count[12].CLK
+clkIn => s_count[13].CLK
+clkIn => s_count[14].CLK
+clkIn => s_count[15].CLK
+clkIn => s_count[16].CLK
+clkIn => s_count[17].CLK
+clkIn => s_count[18].CLK
+clkIn => s_count[19].CLK
+clkIn => s_count[20].CLK
+clkIn => s_count[21].CLK
+clkIn => s_count[22].CLK
+clkIn => s_count[23].CLK
+clkIn => s_count[24].CLK
+clkIn => s_count[25].CLK
+clkIn => s_count[26].CLK
+clkIn => s_count[27].CLK
+clkIn => s_count[28].CLK
+clkIn => s_count[29].CLK
+clkIn => s_count[30].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SeqDet1001|SeqDetFSM:seqDet
+clk => pState~1.DATAIN
+xin => yout.DATAB
+xin => nState.B.IN0
+xin => Selector0.IN1
+xin => nState.C.DATAB
+xin => nState.D.DATAB
+reset => pState.OUTPUTSELECT
+reset => pState.OUTPUTSELECT
+reset => pState.OUTPUTSELECT
+reset => pState.OUTPUTSELECT
+yout <= yout.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,152 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera/docs/Aula9/Parte2/simulation/modelsim
+Eaddsubregn
+Z1 w1490924152
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd
+Z6 FC:/altera/docs/Aula9/Parte2/AddSubRegN.vhd
+l0
+L5
+V3RVHR5FY2cNFOoiA0eiZm2
+!s100 FB6I84ON<[E@C<=]ZHCkc1
+Z7 OV;C;10.4b;61
+32
+Z8 !s110 1493423946
+!i10b 1
+Z9 !s108 1493423946.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd|C:/altera/docs/Aula9/Parte2/ClkDividerN.vhd|C:/altera/docs/Aula9/Parte2/IterDivCore.vhd|C:/altera/docs/Aula9/Parte2/IterMultCore.vhd|C:/altera/docs/Aula9/Parte2/IterMultDiv.vhd|C:/altera/docs/Aula9/Parte2/IterMultDiv_Tb.vhd|C:/altera/docs/Aula9/Parte2/MainCtrlUnit.vhd|C:/altera/docs/Aula9/Parte2/MultCtrlUnit.vhd|C:/altera/docs/Aula9/Parte2/ShiftRegN.vhd|
+Z11 !s107 C:/altera/docs/Aula9/Parte2/ShiftRegN.vhd|C:/altera/docs/Aula9/Parte2/MultCtrlUnit.vhd|C:/altera/docs/Aula9/Parte2/MainCtrlUnit.vhd|C:/altera/docs/Aula9/Parte2/IterMultDiv_Tb.vhd|C:/altera/docs/Aula9/Parte2/IterMultDiv.vhd|C:/altera/docs/Aula9/Parte2/IterMultCore.vhd|C:/altera/docs/Aula9/Parte2/IterDivCore.vhd|C:/altera/docs/Aula9/Parte2/ClkDividerN.vhd|C:/altera/docs/Aula9/Parte2/AddSubRegN.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 addsubregn 0 22 3RVHR5FY2cNFOoiA0eiZm2
+l22
+L18
+VaTN5n`62IU>WNh0A8d;j^2
+Z14 !s100 7E6=@EPfOnT4083U1n=6M2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eclkdividern
+Z15 w1490886286
+R2
+R3
+R4
+R0
+Z16 8C:/altera/docs/Aula9/Parte2/ClkDividerN.vhd
+Z17 FC:/altera/docs/Aula9/Parte2/ClkDividerN.vhd
+l0
+L5
+V1l=Xcd]`bEk;amI>KG2nh1
+!s100 >MSb:dJncL3GcVGS8^]nC2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 clkdividern 0 22 1l=Xcd]`bEk;amI>KG2nh1
+l16
+L11
+VF9>bgg3Dn8[@SMYEcFTd61
+!s100 7kkMLcVe9PVPbeIgJ<VbR3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eiterdivcore
+Z18 w1491437560
+R3
+R4
+R0
+Z19 8C:/altera/docs/Aula9/Parte2/IterDivCore.vhd
+Z20 FC:/altera/docs/Aula9/Parte2/IterDivCore.vhd
+l0
+L4
+VK7L<`Kg]3gQ1FA7ZD>kjo1
+!s100 W4QV`Vk`94O?<ZG_=6mEl2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Astructural
+R3
+R4
+DEx4 work 11 iterdivcore 0 22 K7L<`Kg]3gQ1FA7ZD>kjo1
+l19
+L17
+VjCoPPIj8c9bIEJz`:>hkX0
+Z21 !s100 FczNPR1DmSzmoldMVAh9N1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eitermultcore
+w1491031738
+R3
+R4
+R0
+8C:/altera/docs/Aula9/Parte2/IterMultCore.vhd
+FC:/altera/docs/Aula9/Parte2/IterMultCore.vhd
+l0
+L4
+VE1Nh<z3^[KV^3<IfABJDB3
+!s100 DbcMhek^3LVfXVVKV`f@f3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
