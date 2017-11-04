@@ -1,12 +1,9 @@
 # Laboratórios de Sistemas Digitais
-MIECT UA
+Mestrado Integrado em Engenharia de Computadores e Telemática
 
-O código aqui disponibilizado não pode ser copiado mas pode ser visualizado.
-O código é fornecido tal como está e embora tenha sido testado, poderá apresentar erros, pelos quais não me responsabilizo.
+Universidade de Aveiro
 
 Pedro Teixeira
 
 ----------------
-Este repositório contém exercícios das seguintes disciplinas: 
-  
 Laboratórios de Sistemas Digitais 2017
